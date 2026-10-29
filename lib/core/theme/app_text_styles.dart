@@ -91,4 +91,39 @@ class AppTextStyles {
     height: 1.33,
     color: AppColors.secondaryText,
   );
+
+  static const TextStyle pickerSelected = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 32,
+    fontWeight: FontWeight.w300,
+    color: AppColors.white,
+  );
+
+  static const TextStyle pickerItem = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 32,
+    fontWeight: FontWeight.w300,
+    color: AppColors.requirementText,
+  );
+
+  static const TextStyle pickerUnit = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    color: AppColors.secondaryText,
+  );
+
+  static const TextStyle segmentSelected = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.bgPrimary,
+  );
+
+  static const TextStyle segmentIdle = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    color: AppColors.secondaryText,
+  );
 }

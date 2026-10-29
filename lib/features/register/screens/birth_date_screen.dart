@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:senbiosys_test/core/theme/app_colors.dart';
 import 'package:senbiosys_test/core/theme/app_text_styles.dart';
 import 'package:senbiosys_test/features/register/providers/register_provider.dart';
+import 'package:senbiosys_test/features/register/screens/height_screen.dart';
 import 'package:senbiosys_test/shared/widgets/app_button.dart';
 import 'package:senbiosys_test/shared/widgets/app_text_field.dart';
 
@@ -123,9 +124,11 @@ class _BirthDateScreenState extends State<BirthDateScreen> {
                 AppButton(
                   label: 'Continue',
                   onPressed: register.isBirthDateValid
-                      ? () {
-                          // TODO: navigate to the next register screen
-                        }
+                      ? () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const HeightScreen(),
+                          ),
+                        )
                       : null,
                 ),
                 const SizedBox(height: 16),
