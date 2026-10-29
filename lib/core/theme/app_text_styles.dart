@@ -38,4 +38,34 @@ class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
+
+  static const TextStyle screenTitle = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 32,
+    fontWeight: FontWeight.w300,
+    height: 1.14,
+    letterSpacing: -0.5,
+    color: AppColors.white,
+  );
+
+  static const TextStyle fieldCaption = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    color: AppColors.secondaryText,
+  );
+
+  static const TextStyle link = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    color: AppColors.link,
+  );
+
+  static const TextStyle input = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.white,
+  );
 }

@@ -8,6 +8,16 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color secondaryText = Color(0xFF6E7685);
 
+  static const Color link = Color(0xFF4D7CC0);
+  static const Color fieldFill = Color(0x14FFFFFF);
+
+  static const LinearGradient screenGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [bgSecondary, bgPrimary],
+    stops: [0.0, 0.55],
+  );
+
   static const LinearGradient bgGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senbiosys_test/core/theme/app_colors.dart';
 import 'package:senbiosys_test/core/theme/app_text_styles.dart';
+import 'package:senbiosys_test/features/register/screens/register_email_screen.dart';
 import 'package:senbiosys_test/features/welcome/widgets/welcome_header.dart';
 import 'package:senbiosys_test/shared/widgets/app_button.dart';
 
@@ -45,9 +46,11 @@ class WelcomeScreen extends StatelessWidget {
                   AppButton(
                     label: 'Create account',
                     isPrimary: false,
-                    onPressed: () {
-                      // TODO: navigate to Create account
-                    },
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const RegisterEmailScreen(),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 16),
                 ],
