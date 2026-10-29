@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:senbiosys_test/features/tips/screens/tobacco_screen.dart';
 import 'package:senbiosys_test/shared/widgets/app_chip.dart';
 import 'package:senbiosys_test/shared/widgets/glass_card.dart';
 import '../providers/lifestyle_provider.dart';
@@ -34,7 +35,17 @@ class LifestyleCard extends StatelessWidget {
                 runSpacing: 5,
                 children: [
                   for (final habit in lifestyle.habits)
-                    AppChip(label: habit, icon: Icons.add),
+                    AppChip(
+                      label: habit,
+                      icon: Icons.add,
+                      onTap: habit == LifestyleProvider.tobaccoUse
+                          ? () => Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => const TobaccoScreen(),
+                              ),
+                            )
+                          : null,
+                    ),
                 ],
               ),
             ),

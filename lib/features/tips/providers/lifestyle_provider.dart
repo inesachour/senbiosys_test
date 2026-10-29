@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 
 class LifestyleProvider extends ChangeNotifier {
+  static const String tobaccoUse = 'Tobacco use';
+
   final List<String> _habits = const [
-    'Tobacco use',
+    tobaccoUse,
     'Alcohol use',
     'Physical activity',
     'Stress levels',

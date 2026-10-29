@@ -12,6 +12,15 @@ class AppColors {
   static const Color glassBorder = Color(0x1AFFFFFF);
   static const Color chipFill = Color(0x80233250);
 
+  static const Color radioIdle = Color(0x99233250);
+
+  static const LinearGradient screenGradient = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [bgSecondary, bgPrimary],
+    stops: [0.0, 0.55],
+  );
+
   static const LinearGradient bgGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
