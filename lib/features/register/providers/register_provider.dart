@@ -20,6 +20,42 @@ class RegisterProvider extends ChangeNotifier {
 
   bool get isEmailValid => _emailPattern.hasMatch(_email.trim());
 
+  String _day = '';
+  String _month = '';
+  String _year = '';
+
+  String get day => _day;
+  String get month => _month;
+  String get year => _year;
+
+  bool get isBirthDateValid {
+    final day = int.tryParse(_day);
+    final month = int.tryParse(_month);
+    final year = int.tryParse(_year);
+    if (day == null || month == null || year == null || _year.length != 4) {
+      return false;
+    }
+    final date = DateTime(year, month, day);
+    final isRealDate =
+        date.year == year && date.month == month && date.day == day;
+    return isRealDate && year >= 1900 && !date.isAfter(DateTime.now());
+  }
+
+  void setDay(String value) {
+    _day = value;
+    notifyListeners();
+  }
+
+  void setMonth(String value) {
+    _month = value;
+    notifyListeners();
+  }
+
+  void setYear(String value) {
+    _year = value;
+    notifyListeners();
+  }
+
   List<PasswordRequirement> get requirements => [
     PasswordRequirement(
       '1 lowercase letter',

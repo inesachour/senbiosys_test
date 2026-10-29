@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:senbiosys_test/core/theme/app_colors.dart';
 import 'package:senbiosys_test/core/theme/app_text_styles.dart';
 
@@ -13,10 +14,14 @@ class AppTextField extends StatelessWidget {
     this.textInputAction,
     this.autofocus = false,
     this.horizontalPadding = 20,
+    this.borderRadius = 24,
+    this.focusNode,
+    this.inputFormatters,
   });
 
   final ValueChanged<String> onChanged;
 
+  /// Small label shown above the text. Pass null to hide it.
   final String? label;
   final bool obscureText;
   final Widget? suffix;
@@ -24,6 +29,9 @@ class AppTextField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final bool autofocus;
   final double horizontalPadding;
+  final double borderRadius;
+  final FocusNode? focusNode;
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +43,7 @@ class AppTextField extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: AppColors.fieldFill,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: Row(
         children: [
@@ -48,9 +56,11 @@ class AppTextField extends StatelessWidget {
                   Text(label!, style: AppTextStyles.fieldLabel),
                 TextField(
                   onChanged: onChanged,
+                  focusNode: focusNode,
                   obscureText: obscureText,
                   keyboardType: keyboardType,
                   textInputAction: textInputAction,
+                  inputFormatters: inputFormatters,
                   autofocus: autofocus,
                   cursorColor: AppColors.white,
                   style: AppTextStyles.input,
