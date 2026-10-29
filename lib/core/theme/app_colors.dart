@@ -5,7 +5,7 @@ class AppColors {
 
   static const Color bgPrimary = Color(0xFF0A1325);
   static const Color bgSecondary = Color(0xFF233250);
-  static const Color white = Color(0xFFFFFF);
+  static const Color white = Color(0xFFFFFFFF);
   static const Color secondaryText = Color(0xFF6E7685);
 
   static const LinearGradient bgGradient = LinearGradient(
