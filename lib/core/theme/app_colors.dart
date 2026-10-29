@@ -8,6 +8,10 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color secondaryText = Color(0xFF6E7685);
 
+  static const Color glassFill = Color(0x0DFFFFFF);
+  static const Color glassBorder = Color(0x1AFFFFFF);
+  static const Color chipFill = Color(0x80233250);
+
   static const LinearGradient bgGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,

@@ -34,8 +34,38 @@ class AppTextStyles {
   );
 
   static const TextStyle button = TextStyle(
-    fontFamily: AppFonts.suisse, // TODO inter
+    fontFamily: AppFonts.suisse,
     fontSize: 16,
     fontWeight: FontWeight.w500,
+  );
+
+  static const TextStyle sectionTitle = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.white,
+  );
+
+  static const TextStyle tipTitle = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 22,
+    fontWeight: FontWeight.w500,
+    letterSpacing: -0.4,
+    color: AppColors.white,
+  );
+
+  static const TextStyle tipDescription = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    height: 1.25,
+    color: AppColors.white,
+  );
+
+  static const TextStyle chip = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.white,
   );
 }

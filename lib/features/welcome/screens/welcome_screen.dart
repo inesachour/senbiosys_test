@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senbiosys_test/core/theme/app_colors.dart';
 import 'package:senbiosys_test/core/theme/app_text_styles.dart';
+import 'package:senbiosys_test/features/tips/screens/tips_screen.dart';
 import 'package:senbiosys_test/features/welcome/widgets/welcome_header.dart';
 import 'package:senbiosys_test/shared/widgets/app_button.dart';
 
@@ -37,9 +38,9 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(height: 32),
                   AppButton(
                     label: 'Log in',
-                    onPressed: () {
-                      // TODO: navigate to Log in
-                    },
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const TipsScreen()),
+                    ),
                   ),
                   const SizedBox(height: 14),
                   AppButton(
