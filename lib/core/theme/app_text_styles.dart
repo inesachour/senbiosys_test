@@ -68,4 +68,27 @@ class AppTextStyles {
     fontWeight: FontWeight.w300,
     color: AppColors.white,
   );
+
+  static const TextStyle fieldLabel = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    color: AppColors.secondaryText,
+  );
+
+  static const TextStyle requirement = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    height: 1.33,
+    color: AppColors.requirementText,
+  );
+
+  static const TextStyle strengthCaption = TextStyle(
+    fontFamily: AppFonts.suisse,
+    fontSize: 12,
+    fontWeight: FontWeight.w300,
+    height: 1.33,
+    color: AppColors.secondaryText,
+  );
 }

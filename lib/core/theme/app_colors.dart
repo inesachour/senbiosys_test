@@ -11,6 +11,9 @@ class AppColors {
   static const Color link = Color(0xFF4D7CC0);
   static const Color fieldFill = Color(0x14FFFFFF);
 
+  static const Color success = Color(0xFF5FAE8E);
+  static const Color requirementText = Color(0xCCFFFFFF);
+
   static const LinearGradient screenGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
