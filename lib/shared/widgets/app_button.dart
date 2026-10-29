@@ -22,6 +22,12 @@ class AppButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
+          disabledBackgroundColor:
+              (isPrimary ? AppColors.white : AppColors.bgSecondary).withValues(
+                alpha: 0.4,
+              ),
+          disabledForegroundColor: AppColors.bgPrimary,
+
           backgroundColor: isPrimary
               ? AppColors.white
               : AppColors.bgSecondary.withValues(alpha: 0.5),
