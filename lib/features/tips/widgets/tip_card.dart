@@ -5,6 +5,8 @@ import 'package:senbiosys_test/features/tips/models/tip.dart';
 class TipCard extends StatelessWidget {
   const TipCard({super.key, required this.tip});
 
+  static const double _imageZoom = 1.5;
+
   final Tip tip;
 
   @override
@@ -14,10 +16,18 @@ class TipCard extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(tip.imagePath, fit: BoxFit.cover),
+          Transform.scale(
+            scale: _imageZoom,
+            alignment: Alignment.topCenter,
+            child: Image.asset(
+              tip.imagePath,
+              fit: BoxFit.cover,
+              alignment: Alignment.topCenter,
+            ),
+          ),
           const ColoredBox(color: Color(0x33000000)),
           Padding(
-            padding: EdgeInsets.fromLTRB(20, 6, 20, 0),
+            padding: const EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

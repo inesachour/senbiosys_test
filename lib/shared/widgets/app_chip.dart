@@ -28,17 +28,18 @@ class AppChip extends StatelessWidget {
       ),
       child: InkWell(
         onTap: onTap,
-        child: Container(
+        child: SizedBox(
           height: 39,
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          alignment: Alignment.center,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(label, style: AppTextStyles.chip),
-              const SizedBox(width: 8),
-              Icon(icon, size: 14, color: AppColors.white),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(label, style: AppTextStyles.chip),
+                const SizedBox(width: 8),
+                Icon(icon, size: 14, color: AppColors.white),
+              ],
+            ),
           ),
         ),
       ),
