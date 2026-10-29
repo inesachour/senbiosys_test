@@ -50,7 +50,7 @@ class _PickerWheelState extends State<PickerWheel> {
         ),
         if (selected)
           Transform.translate(
-            offset: const Offset(30, 6),
+            offset: const Offset(36, 6),
             child: Text(widget.unit, style: AppTextStyles.pickerUnit),
           ),
       ],
