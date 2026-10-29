@@ -17,7 +17,7 @@ class TipCard extends StatelessWidget {
           Image.asset(tip.imagePath, fit: BoxFit.cover),
           const ColoredBox(color: Color(0x33000000)),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.fromLTRB(20, 6, 20, 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

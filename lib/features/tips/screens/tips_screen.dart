@@ -6,6 +6,7 @@ import 'package:senbiosys_test/features/tips/providers/tips_provider.dart';
 import 'package:senbiosys_test/features/tips/widgets/learn_more_button.dart';
 import 'package:senbiosys_test/features/tips/widgets/lifestyle_card.dart';
 import 'package:senbiosys_test/features/tips/widgets/tips_card.dart';
+import 'package:senbiosys_test/features/tips/widgets/top_blur_overlay.dart';
 
 class TipsScreen extends StatelessWidget {
   const TipsScreen({super.key});
@@ -25,18 +26,29 @@ class TipsScreen extends StatelessWidget {
             const DecoratedBox(
               decoration: BoxDecoration(gradient: AppColors.bgGradient),
             ),
+            const Positioned(
+              top: 0,
+              left: 0,
+              right: 0,
+              child: IgnorePointer(child: TopBlurOverlay()),
+            ),
             SafeArea(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: IconButton(
-                        onPressed: () => Navigator.of(context).maybePop(),
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          color: AppColors.white,
+                    SizedBox(
+                      height: kToolbarHeight,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: IconButton(
+                          onPressed: () => Navigator.of(context).maybePop(),
+                          padding: EdgeInsets.zero,
+                          alignment: Alignment.centerLeft,
+                          icon: const Icon(
+                            Icons.arrow_back,
+                            color: AppColors.white,
+                          ),
                         ),
                       ),
                     ),
